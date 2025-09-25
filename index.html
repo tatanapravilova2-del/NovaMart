@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lux Microtech — Custom Microchips & Electronics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lux Microtech — premium microchips, controllers, sensors and PCB assembly. Fast EU delivery.">
+<meta name="keywords" content="microchips, microcontrollers, sensors, PCB assembly, electronics store, IoT, power MOSFET">
+<meta name="author" content="Lux Microtech">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://lux-microtech.example/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lux Microtech — Custom Microchips & Electronics">
+<meta property="og:description" content="Shop microchips, controllers, sensors and PCB services.">
+<meta property="og:url" content="https://lux-microtech.example/">
+<meta property="og:image" content="https://images.pexels.com/photos/8252589/pexels-photo-8252589.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lux Microtech — Premium Electronics">
+<meta name="twitter:description" content="Components & custom electronics with fast EU delivery.">
+<meta name="twitter:image" content="https://images.pexels.com/photos/8252589/pexels-photo-8252589.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<!-- Performance hints -->
+<link rel="preconnect" href="https://images.pexels.com" crossorigin>
+<link rel="preconnect" href="https://cdn.pixabay.com" crossorigin>
+<link rel="dns-prefetch" href="//images.pexels.com">
+<link rel="dns-prefetch" href="//cdn.pixabay.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141618'/%3E%3Cpath d='M18 32h28M32 18v28' stroke='%23D4AF37' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* ---- Dark luxe, mobile-first; критический CSS ---- */
+:root{--bg:#0e0f12;--panel:#15171b;--panel2:#1b1e24;--line:#262a33;--text:#ececf2;--muted:#a3a8b5;--gold:#d4af37;--gold2:#c49e2f;--danger:#e24d4d}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:0 auto}
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:rgba(14,15,18,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.logo{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);display:grid;place-items:center;background:linear-gradient(135deg,#1b1c21,#111214)}
+.logo::after{content:"";width:12px;height:12px;border:3px solid var(--gold);border-radius:50%}
+.brand span{color:var(--gold)}
+.menu{display:flex;align-items:center;gap:8px}
+.menu a{padding:8px 10px;border-radius:10px;color:var(--muted)}
+.menu a.active,.menu a:hover{color:var(--text);background:var(--panel)}
+.pill{background:var(--panel2);border:1px solid var(--line);padding:6px 10px;border-radius:999px;display:inline-flex;gap:8px;align-items:center}
+.badge{background:var(--gold);color:#121;border-radius:999px;padding:2px 8px;font-weight:800}
+/* Pages */
+.page{display:none;padding:24px 0}
+.page.active{display:block}
+/* HOME intro only */
+.hero{margin:14px 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:
+radial-gradient(1000px 400px at 100% -10%, rgba(212,175,55,.08), transparent 60%),
+linear-gradient(180deg,#111214,#0e0f12)}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+.hero-txt{padding:38px}
+.eyebrow{color:var(--gold);letter-spacing:.26em;font-size:.8rem;text-transform:uppercase}
+h1{margin:.2em 0 .4em;font-size:clamp(28px,4.5vw,56px)}
+.muted{color:var(--muted)}
+.cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);cursor:pointer}
+.btn:hover{background:var(--panel)}
+.btn.primary{background:var(--gold);color:#151515;border:none}
+.btn.primary:hover{background:var(--gold2)}
+.slider{position:relative;overflow:hidden;height:320px}
+.slides{display:flex;transition:transform .6s ease}
+.slide{min-width:100%;height:320px;position:relative}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.25))}
+.dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center}
+.dot{width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.5);border:1px solid rgba(0,0,0,.2);cursor:pointer}
+.dot.active{background:#fff}
+/* Catalog */
+.headline{display:flex;align-items:end;justify-content:space-between;margin:10px 0}
+.grid2{display:grid;grid-template-columns:260px 1fr;gap:16px}
+@media(max-width:980px){.grid2{grid-template-columns:1fr}}
+.side{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;position:sticky;top:74px;height:max-content}
+.side h3{margin:8px 0 8px}
+.flt{margin-bottom:12px}
+.chk{display:flex;gap:8px;align-items:center;margin:6px 0;color:var(--muted)}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{background:#21242b;border:1px solid var(--line);padding:4px 8px;border-radius:999px;font-size:.86rem;color:var(--muted);cursor:pointer}
+.tag.active{background:var(--panel2);color:var(--text)}
+.range{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.range input{width:100%}
+.sort-row{display:flex;gap:8px;align-items:center}
+.select{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text)}
+.reset{color:#ffb0b0;text-decoration:underline;cursor:pointer;font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.product{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:4/3;background:#0d0f13}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.info{padding:12px 12px 14px}
+.title{margin:6px 0 2px;font-weight:700}
+.desc{color:var(--muted);font-size:.95rem;min-height:2.4em}
+.price{margin:8px 0 10px;color:var(--gold);font-weight:800}
+.actions{display:flex;gap:8px}
+.qty{display:flex;align-items:center;gap:8px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+.qty button{background:transparent;color:var(--text);border:none;font-size:18px;line-height:1;cursor:pointer}
+.small{color:var(--muted);text-decoration:underline;cursor:pointer}
+.pager{display:flex;justify-content:center;gap:8px;margin:12px 0 2px;flex-wrap:wrap}
+.pager a{padding:8px 12px;border:1px solid var(--line);border-radius:10px;color:var(--muted)}
+.pager a.active,.pager a:hover{color:var(--text);background:var(--panel)}
+/* Cart & Checkout */
+.table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.table th,.table td{padding:12px;border-bottom:1px solid var(--line);text-align:left}
+.table th{background:var(--panel2);color:var(--muted);font-weight:600}
+.right{text-align:right}
+.summary{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.row{display:flex;justify-content:space-between;margin:8px 0}
+.total{font-weight:900}
+.note{color:var(--muted);font-size:.9rem}
+.empty{padding:16px;border:1px dashed var(--line);border-radius:12px;text-align:center;color:var(--muted)}
+.form{max-width:560px}
+label{display:block;margin:10px 0 6px;color:var(--muted)}
+input,select,textarea{width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.row2{grid-template-columns:1fr}}
+footer{margin:30px 0 12px;text-align:center;color:var(--muted)}
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:60}
+.modal.show{display:flex}
+.modal-box{width:min(900px,94%);background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.modal-h{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--line)}
+.modal-b{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:820px){.modal-b{grid-template-columns:1fr}}
+.modal-img{height:300px;background:#0d0f13}
+.modal-img img{width:100%;height:100%;object-fit:cover}
+.close{background:transparent;border:none;color:var(--muted);font-size:24px;cursor:pointer}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#" onclick="go('home');return false;"><div class="logo"></div><div>Lux <span>Microtech</span></div></a>
+    <nav class="menu">
+      <a href="#" id="nav-home" class="active" onclick="go('home');return false;">Home</a>
+      <a href="#" id="nav-shop" onclick="go('shop');return false;">Shop</a>
+      <a href="#" id="nav-cart" onclick="go('cart');return false;"><span class="pill">Cart <span id="badge" class="badge" style="display:none">0</span></span></a>
+      <a href="#" id="nav-checkout" onclick="go('checkout');return false;">Checkout</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- PAGE: HOME (intro only) -->
+  <section id="page-home" class="page active" aria-label="Home">
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-txt">
+          <div class="eyebrow">Microchips • Controllers • Sensors • PCB</div>
+          <h1>Custom electronics, built to your spec.</h1>
+          <p class="muted">We design and ship premium microelectronics for makers and teams. From MCUs to power stages — fast, predictable, documented.</p>
+          <div class="cta">
+            <a class="btn primary" href="#" onclick="go('shop');return false;">Enter shop</a>
+            <a class="btn" href="#" onclick="document.getElementById('home-why').scrollIntoView({behavior:'smooth'});return false;">Why Lux Microtech</a>
+          </div>
+        </div>
+        <div class="slider" id="slider">
+          <div class="slides" id="slides">
+            <div class="slide"><img loading="lazy" alt="Close-up microchip" src="https://images.pexels.com/photos/8252589/pexels-photo-8252589.jpeg?auto=compress&cs=tinysrgb&w=1600"></div>
+            <div class="slide"><img loading="lazy" alt="Soldering PCB" src="https://images.pexels.com/photos/103573/pexels-photo-103573.jpeg?auto=compress&cs=tinysrgb&w=1600"></div>
+            <div class="slide"><img loading="lazy" alt="Lab equipment" src="https://images.pexels.com/photos/234544/pexels-photo-234544.jpeg?auto=compress&cs=tinysrgb&w=1600"></div>
+          </div>
+          <div class="dots" id="dots"></div>
+        </div>
+      </div>
+    </div>
+    <div id="home-why" class="summary">
+      <div class="row"><b>Made-to-order</b><span class="muted">Package, pinout, tolerances — your spec.</span></div>
+      <div class="row"><b>QA included</b><span class="muted">Thermal cycles, optical inspection, reports.</span></div>
+      <div class="row"><b>Fast logistics</b><span class="muted">EU shipping in 2–5 days, global options available.</span></div>
+    </div>
+  </section>
+
+  <!-- PAGE: SHOP (products + filters + 15 pages) -->
+  <section id="page-shop" class="page" aria-label="Shop">
+    <div class="headline">
+      <div><h2 style="margin:.3em 0">Catalog</h2><div class="muted">Microcontrollers, sensors, power & services</div></div>
+      <div class="pill" id="count-pill">0 items</div>
+    </div>
+    <div class="grid2">
+      <aside class="side">
+        <div class="flt">
+          <h3>Category</h3>
+          <label class="chk"><input type="checkbox" class="f-cat" value="mcu" checked> Microcontrollers</label>
+          <label class="chk"><input type="checkbox" class="f-cat" value="sensor" checked> Sensors</label>
+          <label class="chk"><input type="checkbox" class="f-cat" value="power" checked> Power / MOSFET</label>
+          <label class="chk"><input type="checkbox" class="f-cat" value="service" checked> PCB / Services</label>
+        </div>
+        <div class="flt">
+          <h3>Brand</h3>
+          <div class="tags" id="brand-tags"></div>
+        </div>
+        <div class="flt">
+          <h3>Voltage</h3>
+          <div class="tags" id="volt-tags">
+            <span class="tag active" data-volt="any">Any</span>
+            <span class="tag" data-volt="3.3V">3.3V</span>
+            <span class="tag" data-volt="5V">5V</span>
+            <span class="tag" data-volt="12V">12V</span>
+          </div>
+        </div>
+        <div class="flt">
+          <h3>Price</h3>
+          <div class="range">
+            <input type="number" id="p-min" min="0" step="1" value="0">
+            <input type="number" id="p-max" min="0" step="1" value="300">
+          </div>
+        </div>
+        <div class="flt">
+          <h3>Sort</h3>
+          <div class="sort-row">
+            <select id="sort" class="select">
+              <option value="popular">Popular</option>
+              <option value="price_asc">Price ↑</option>
+              <option value="price_desc">Price ↓</option>
+              <option value="name_asc">Name A–Z</option>
+            </select>
+            <span class="reset" onclick="resetFilters()">Reset</span>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <div class="grid" id="grid"></div>
+        <div class="pager" id="pager"></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- PAGE: CART -->
+  <section id="page-cart" class="page" aria-label="Cart">
+    <h2 style="margin:.3em 0">Your Cart</h2>
+    <div class="grid2" style="grid-template-columns:1fr .6fr">
+      <div>
+        <table class="table" aria-live="polite">
+          <thead><tr><th>Item</th><th class="right">Qty</th><th class="right">Price</th><th class="right">Total</th><th></th></tr></thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+        <div id="empty" class="empty" style="display:none">Your cart is empty.</div>
+      </div>
+      <aside class="summary">
+        <div class="row"><span>Subtotal</span><span id="c-sub">$0.00</span></div>
+        <div class="row"><span>Shipping</span><span id="c-ship">$0.00</span></div>
+        <div class="row"><span>Discount</span><span id="c-disc">-$0.00</span></div>
+        <div class="row total"><span>Total</span><span id="c-total">$0.00</span></div>
+        <div class="row"><input id="promo" placeholder="Promo: LUX10 / FREESHIP / EU5"><button class="btn" onclick="applyPromo()" style="margin-left:8px">Apply</button></div>
+        <div class="note">Shipping updates at checkout after selecting country/method.</div>
+        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn" onclick="go('shop')">Continue shopping</button>
+          <button class="btn primary" id="to-checkout" onclick="go('checkout')" disabled>Proceed to checkout</button>
+          <button class="btn" onclick="clearCart()">Clear</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PAGE: CHECKOUT -->
+  <section id="page-checkout" class="page" aria-label="Checkout">
+    <h2 style="margin:.3em 0">Checkout</h2>
+    <div class="grid2" style="grid-template-columns:1fr .6fr">
+      <div class="form">
+        <label for="f-name">Full name</label><input id="f-name" placeholder="John Smith" required>
+        <label for="f-email">Email</label><input id="f-email" type="email" placeholder="you@example.com" required>
+        <label for="f-phone">Phone</label><input id="f-phone" type="tel" placeholder="+49 151 234 5678" required>
+        <label for="f-address">Address</label><textarea id="f-address" rows="3" placeholder="Street, building, apt" required></textarea>
+        <div class="row2">
+          <div><label for="f-city">City</label><input id="f-city" placeholder="Berlin"></div>
+          <div><label for="f-zip">Postal code</label><input id="f-zip" placeholder="10115"></div>
+        </div>
+        <label for="f-country">Country (tax applies)</label><input id="f-country" placeholder="Germany" list="countries" required>
+        <datalist id="countries"><option value="Germany"><option value="France"><option value="Poland"><option value="Spain"><option value="Italy"><option value="Netherlands"><option value="United Kingdom"><option value="United States"></datalist>
+        <label for="f-ship">Delivery method</label>
+        <select id="f-ship" class="select">
+          <option value="courier">Courier (2–5 days) — $9.99</option>
+          <option value="post">Post (5–10 days) — $4.99</option>
+          <option value="pickup">Pickup — $0</option>
+        </select>
+        <label for="f-pay">Payment</label>
+        <select id="f-pay" class="select">
+          <option value="prepay">Prepayment (Online)</option>
+          <option value="cod">Cash on Delivery</option>
+          <option value="paypal">PayPal</option>
+        </select>
+        <label><input type="checkbox" id="f-terms"> I agree to the Terms and Privacy.</label>
+        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn" onclick="go('cart')">Back to cart</button>
+          <button class="btn primary" onclick="placeOrder()">Place order</button>
+        </div>
+        <p id="msg" class="note" style="display:none;margin-top:8px"></p>
+      </div>
+      <aside class="summary">
+        <div class="row"><span>Items</span><span id="s-items">0</span></div>
+        <div class="row"><span>Subtotal</span><span id="s-sub">$0.00</span></div>
+        <div class="row"><span>Shipping</span><span id="s-ship">$0.00</span></div>
+        <div class="row"><span>Discount</span><span id="s-disc">-$0.00</span></div>
+        <div class="row"><span>Tax</span><span id="s-tax">$0.00</span></div>
+        <div class="row total"><span>Total</span><span id="s-total">$0.00</span></div>
+        <p class="note">Example VAT: DE 19%, FR 20%, PL 23%, ES 21%, IT 22%, NL 21%, GB 20%, US 0%.</p>
+        <div class="row"><button class="btn" onclick="exportCSV()">Export orders (CSV)</button><button class="btn" onclick="exportXLS()">Export (XLS)</button></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="container">© <span id="year"></span> Lux Microtech. All rights reserved.</footer>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="modal-h"><strong id="m-title">Product</strong><button class="close" onclick="modalClose()">×</button></div>
+    <div class="modal-b">
+      <div class="modal-img"><img id="m-img" alt=""></div>
+      <div style="padding:12px">
+        <div class="muted" id="m-meta" style="margin:6px 0"></div>
+        <div id="m-desc" style="margin:6px 0 10px"></div>
+        <div class="price" id="m-price" style="margin:6px 0 10px"></div>
+        <div class="actions">
+          <div class="qty"><button onclick="mQty(-1)">−</button><span id="m-qty">1</span><button onclick="mQty(1)">+</button></div>
+          <button class="btn" id="m-add">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JSON-LD Organization + Breadcrumbs -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Organization","name":"Lux Microtech","url":"https://lux-microtech.example/","logo":"https://lux-microtech.example/icon.png"},
+  {"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://lux-microtech.example/"},
+    {"@type":"ListItem","position":2,"name":"Shop","item":"https://lux-microtech.example/#shop"}
+  ]}
+]}
+</script>
+
+<script defer>
+/* ======== DATA (15 страниц каталога с генерацией) ======== */
+const BRANDS = ['LuxCore','VoltMax','AstraBits','NeuroLink','SkySense','OhmForge','ProtoLab','AtlasIC'];
+const IMG = {
+  mcu:'https://images.pexels.com/photos/4705623/pexels-photo-4705623.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  sensor:'https://images.pexels.com/photos/1265619/pexels-photo-1265619.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  power:'https://cdn.pixabay.com/photo/2018/10/14/16/38/chip-3749136_1280.jpg',
+  service:'https://cdn.pixabay.com/photo/2015/11/11/11/49/solder-1038523_1280.jpg'
+};
+const PRODUCTS = (()=>{ // 15 pages * 12–14 items ≈ 190+
+  const arr=[]; let id=1; const cats=['mcu','sensor','power','service'];
+  for(let p=1;p<=15;p++){
+    const per= p%3===0?12 : 14;
+    for(let i=0;i<per;i++){
+      const cat=cats[(p+i)%cats.length];
+      const brand=BRANDS[(p*5+i)%BRANDS.length];
+      const volt=['3.3V','5V','12V'][(p+i)%3];
+      const base = cat==='mcu'? 19 : cat==='sensor'? 8 : cat==='power'? 11 : 49;
+      const price = Math.round((base + (i%6)*2 + (p%4))*100)/100;
+      arr.push({
+        id:'itm-'+(id++),
+        page:p,
+        cat,
+        brand,
+        name:(cat==='mcu'?'MCU ':'')+(cat==='sensor'?'Sensor ':'')+(cat==='power'?'Power Stage ':'')+(cat==='service'?'PCB Service ':'')+brand+' '+(100+p)+'-'+(i+1),
+        desc: cat==='mcu' ? `${brand} microcontroller, fast IO, low power.` :
+              cat==='sensor' ? `${brand} sensor module, stable readings.` :
+              cat==='power' ? `${brand} MOSFET stage, high efficiency.` :
+                              `${brand} soldering & assembly with QA.`,
+        price,
+        volt,
+        img: IMG[cat]
+      });
+    }
+  }
+  return arr;
+})();
+
+/* ======== STATE ======== */
+let page=1;
+let cart = JSON.parse(localStorage.getItem('lm_cart')||'[]'); // {id,name,price,qty}
+let promo = JSON.parse(localStorage.getItem('lm_promo')||'null'); // {code,type,val}
+let filter = JSON.parse(localStorage.getItem('lm_filter')||'null') || {
+  cats:{mcu:true,sensor:true,power:true,service:true},
+  brands:new Set(),
+  volt:'any',
+  price:{min:0,max:300},
+  sort:'popular'
+};
+
+/* ======== HELPERS ======== */
+const $=s=>document.querySelector(s);
+const $$=s=>Array.from(document.querySelectorAll(s));
+const money=n=>'$'+Number(n).toFixed(2);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+function saveCart(){ localStorage.setItem('lm_cart',JSON.stringify(cart)); badge(); }
+function saveFilter(){ localStorage.setItem('lm_filter', JSON.stringify({...filter,brands:[...filter.brands]})); }
+function badge(){ const n=cart.reduce((s,i)=>s+i.qty,0); const b=$('#badge'); if(n){b.style.display='inline-block'; b.textContent=n;} else b.style.display='none';}
+
+/* ======== SPA ======== */
+function go(name){
+  $$('.page').forEach(p=>p.classList.remove('active'));
+  $('#page-'+name).classList.add('active');
+  $$('.menu a').forEach(a=>a.classList.remove('active'));
+  $('#nav-'+name)?.classList.add('active');
+  if(name==='shop') renderShop();
+  if(name==='cart') renderCart();
+  if(name==='checkout') syncCheckout();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ======== HERO SLIDER ======== */
+(function slider(){
+  const slides=$('#slides'), dots=$('#dots'), total=slides.children.length; let i=0, timer;
+  for(let k=0;k<total;k++){ const d=document.createElement('div'); d.className='dot'+(k===0?' active':''); d.onclick=()=>goTo(k); dots.appendChild(d); }
+  function goTo(x){ i=x; upd(); rst(); }
+  function upd(){ slides.style.transform=`translateX(${-i*100}%)`; $$('#dots .dot').forEach((d,j)=>d.classList.toggle('active',j===i)); }
+  function next(){ i=(i+1)%total; upd(); }
+  function rst(){ clearInterval(timer); timer=setInterval(next,3500); }
+  rst();
+  let sx=0; slides.addEventListener('touchstart',e=>sx=e.touches[0].clientX);
+  slides.addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40){ if(dx<0) next(); else {i=(i-1+total)%total; upd();} rst(); }});
+})();
+
+/* ======== FILTER UI ======== */
+function initFilters(){
+  // Normalize set after reload
+  if(!(filter.brands instanceof Set)) filter.brands = new Set(filter.brands||[]);
+  // cats
+  $$('.f-cat').forEach(cb=>{
+    cb.checked = !!filter.cats[cb.value];
+    cb.onchange = ()=>{ filter.cats[cb.value]=cb.checked; saveFilter(); renderShop(); };
+  });
+  // brands
+  const b=$('#brand-tags'); b.innerHTML='';
+  BRANDS.forEach(br=>{
+    const t=document.createElement('span'); t.className='tag'; t.textContent=br;
+    if(filter.brands.has(br)) t.classList.add('active');
+    t.onclick=()=>{ filter.brands.has(br)?filter.brands.delete(br):filter.brands.add(br); t.classList.toggle('active'); saveFilter(); renderShop(); };
+    b.appendChild(t);
+  });
+  // voltage
+  $$('#volt-tags .tag').forEach(tag=>{
+    tag.classList.toggle('active', tag.dataset.volt===filter.volt);
+    tag.onclick=()=>{ $$('#volt-tags .tag').forEach(x=>x.classList.remove('active')); tag.classList.add('active'); filter.volt=tag.dataset.volt; saveFilter(); renderShop(); };
+  });
+  // price
+  $('#p-min').value=filter.price.min; $('#p-max').value=filter.price.max;
+  $('#p-min').oninput=$('#p-max').oninput=()=>{ filter.price.min=Number($('#p-min').value||0); filter.price.max=Number($('#p-max').value||9999); saveFilter(); renderShop(); };
+  // sort
+  $('#sort').value=filter.sort;
+  $('#sort').onchange=()=>{ filter.sort=$('#sort').value; saveFilter(); renderShop(); };
+}
+function resetFilters(){
+  filter={cats:{mcu:true,sensor:true,power:true,service:true},brands:new Set(),volt:'any',price:{min:0,max:300},sort:'popular'};
+  saveFilter(); initFilters(); renderShop();
+}
+
+/* ======== SHOP RENDER ======== */
+const PER=12; // per page
+function applyFilters(list){
+  return list.filter(p=>{
+    if(!filter.cats[p.cat]) return false;
+    if(filter.brands.size && !filter.brands.has(p.brand)) return false;
+    if(filter.volt!=='any' && p.volt!==filter.volt) return false;
+    if(p.price<filter.price.min || p.price>filter.price.max) return false;
+    return true;
+  });
+}
+function doSort(list){
+  const a=[...list];
+  if(filter.sort==='price_asc') a.sort((x,y)=>x.price-y.price);
+  if(filter.sort==='price_desc') a.sort((x,y)=>y.price-x.price);
+  if(filter.sort==='name_asc') a.sort((x,y)=>x.name.localeCompare(y.name));
+  return a;
+}
+function renderShop(){
+  initFilters();
+  const all=applyFilters(PRODUCTS);
+  const sorted=doSort(all);
+  const totalPages=Math.max(1,Math.ceil(sorted.length/PER));
+  page=Math.min(page,totalPages);
+  const start=(page-1)*PER, items=sorted.slice(start,start+PER);
+  $('#grid').innerHTML='';
+  items.forEach(p=>$('#grid').appendChild(card(p)));
+  $('#count-pill').textContent=`${all.length} items`;
+  // pager
+  const pager=$('#pager'); pager.innerHTML='';
+  for(let i=1;i<=totalPages;i++){ const a=document.createElement('a'); a.href='#'; a.textContent=i; a.className=i===page?'active':''; a.onclick=e=>{e.preventDefault(); page=i; renderShop(); window.scrollTo({top:0,behavior:'smooth'});}; pager.appendChild(a); }
+  injectProductLD(items); // SEO LD for visible products
+}
+const qtyCache={};
+function card(p){
+  const el=document.createElement('article'); el.className='product';
+  el.innerHTML=`
+    <div class="thumb"><img loading="lazy" src="${p.img}" alt="${esc(p.name)} image"></div>
+    <div class="info">
+      <div class="muted">${esc(p.brand)} • ${p.cat.toUpperCase()} • ${p.volt}</div>
+      <div class="title">${esc(p.name)}</div>
+      <div class="desc">${esc(p.desc)}</div>
+      <div class="price">${money(p.price)}</div>
+      <div class="actions">
+        <div class="qty"><button onclick="chg('${p.id}',-1)">−</button><span id="q-${p.id}">1</span><button onclick="chg('${p.id}',1)">+</button></div>
+        <button class="btn" onclick="add('${p.id}')">Add to cart</button>
+      </div>
+      <div style="margin-top:6px"><span class="small" onclick="quick('${p.id}')">Quick view</span></div>
+    </div>`;
+  return el;
+}
+function chg(id,d){ qtyCache[id]=Math.max(1,(qtyCache[id]||1)+d); const q=$('#q-'+id); if(q) q.textContent=qtyCache[id]; }
+
+/* ======== QUICK VIEW ======== */
+function quick(id){
+  const p=PRODUCTS.find(x=>x.id===id);
+  $('#m-title').textContent=p.name; $('#m-meta').textContent=`${p.brand} • ${p.cat} • ${p.volt}`;
+  $('#m-desc').textContent=p.desc; $('#m-price').textContent=money(p.price);
+  $('#m-img').src=p.img; $('#m-img').alt=p.name+' image';
+  $('#m-qty').textContent='1'; $('#m-add').onclick=()=>{ const n=parseInt($('#m-qty').textContent,10)||1; const ex=cart.find(i=>i.id===p.id); if(ex) ex.qty+=n; else cart.push({id:p.id,name:p.name,price:p.price,qty:n}); saveCart(); modalClose(); alert(p.name+' added (x'+n+').'); };
+  $('#modal').classList.add('show');
+}
+function mQty(d){ const n=Math.max(1,(parseInt($('#m-qty').textContent,10)||1)+d); $('#m-qty').textContent=n; }
+function modalClose(){ $('#modal').classList.remove('show'); }
+window.addEventListener('keydown',e=>{ if(e.key==='Escape') modalClose(); });
+document.getElementById('modal').addEventListener('click',e=>{ if(e.target.id==='modal') modalClose(); });
+
+/* ======== CART ======== */
+function shippingBase(method){ return method==='courier'?9.99:method==='post'?4.99:0; }
+function calcSub(){ return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+function promoAdj(sub,ship){
+  if(!promo) return {disc:0, ship};
+  if(promo.type==='percent') return {disc: sub*promo.val, ship};
+  if(promo.type==='freeship') return {disc:0, ship:0};
+  if(promo.type==='shipminus') return {disc:0, ship:Math.max(0,ship-promo.val)};
+  return {disc:0, ship};
+}
+function renderCart(){
+  const body=$('#cart-body'); body.innerHTML='';
+  const empty=$('#empty'); const btn=$('#to-checkout');
+  if(cart.length===0){ empty.style.display='block'; btn.disabled=true; $('#c-sub').textContent='$0.00'; $('#c-ship').textContent='$0.00'; $('#c-disc').textContent='-$0.00'; $('#c-total').textContent='$0.00'; return; }
+  empty.style.display='none'; btn.disabled=false;
+  let sub=0;
+  cart.forEach(it=>{
+    const tr=document.createElement('tr'), line=it.price*it.qty; sub+=line;
+    tr.innerHTML=`
+      <td>${esc(it.name)}</td>
+      <td class="right">
+        <button class="btn" style="padding:6px 10px" onclick="upd('${it.id}',-1)">−</button>
+        <span style="display:inline-block;min-width:28px;text-align:center">${it.qty}</span>
+        <button class="btn" style="padding:6px 10px" onclick="upd('${it.id}',1)">+</button>
+      </td>
+      <td class="right">${money(it.price)}</td>
+      <td class="right">${money(line)}</td>
+      <td class="right"><a href="#" class="small" onclick="rem('${it.id}');return false;" style="color:var(--danger)">Remove</a></td>`;
+    body.appendChild(tr);
+  });
+  const ship=shippingBase('post'); const adj=promoAdj(sub,ship);
+  $('#c-sub').textContent=money(sub);
+  $('#c-ship').textContent=money(adj.ship);
+  $('#c-disc').textContent='-'+money(adj.disc).replace('$-','$');
+  $('#c-total').textContent=money(Math.max(0, sub - adj.disc + adj.ship));
+}
+function upd(id,d){ const it=cart.find(x=>x.id===id); if(!it) return; it.qty=Math.max(1,it.qty+d); saveCart(); renderCart(); }
+function rem(id){ cart=cart.filter(x=>x.id!==id); saveCart(); renderCart(); }
+function clearCart(){ if(confirm('Clear cart?')){ cart=[]; saveCart(); renderCart(); } }
+function applyPromo(){
+  const code=($('#promo').value||'').trim().toUpperCase();
+  if(!code){ promo=null; localStorage.removeItem('lm_promo'); renderCart(); syncCheckout(); return; }
+  if(code==='LUX10') promo={code,type:'percent',val:0.10};
+  else if(code==='FREESHIP') promo={code,type:'freeship'};
+  else if(code==='EU5') promo={code,type:'shipminus',val:5};
+  else { alert('Unknown promo'); return; }
+  localStorage.setItem('lm_promo',JSON.stringify(promo)); renderCart(); syncCheckout();
+}
+
+/* ======== CHECKOUT ======== */
+const TAX={ 'germany':0.19,'de':0.19,'france':0.20,'fr':0.20,'poland':0.23,'pl':0.23,'spain':0.21,'es':0.21,'italy':0.22,'it':0.22,'netherlands':0.21,'nl':0.21,'united kingdom':0.20,'uk':0.20,'gb':0.20,'united states':0.00,'us':0.00 };
+function taxRate(c){ if(!c) return 0; const k=c.toLowerCase().trim(); return TAX[k]??0; }
+function summary(method='post',country=''){
+  const sub=calcSub(); let ship=shippingBase(method); const adj=promoAdj(sub,ship);
+  ship=adj.ship; const disc=adj.disc; const tax=(Math.max(0,sub-disc))*taxRate(country);
+  const total=Math.max(0, sub - disc + ship + tax);
+  return {sub,ship,disc,tax,total,items:cart.reduce((s,i)=>s+i.qty,0)};
+}
+function syncCheckout(){
+  const m=$('#f-ship').value, country=$('#f-country').value;
+  const s=summary(m,country);
+  $('#s-items').textContent=s.items;
+  $('#s-sub').textContent=money(s.sub);
+  $('#s-ship').textContent=money(s.ship);
+  $('#s-disc').textContent='-'+money(s.disc).replace('$-','$');
+  $('#s-tax').textContent=money(s.tax);
+  $('#s-total').textContent=money(s.total);
+  $('#f-ship').onchange=syncCheckout; $('#f-country').oninput=syncCheckout;
+}
+function placeOrder(){
+  if(cart.length===0){ alert('Cart is empty'); go('shop'); return; }
+  const req=['f-name','f-email','f-phone','f-address','f-city','f-zip','f-country'];
+  for(const id of req){ if(!$('#'+id).value.trim()){ alert('Please fill all fields'); return; } }
+  if(!$('#f-terms').checked){ alert('Please accept Terms & Privacy'); return; }
+  const s=summary($('#f-ship').value,$('#f-country').value.trim());
+  const order={ id:'ORD-'+Date.now(), when:new Date().toISOString(),
+    customer:{name:$('#f-name').value,email:$('#f-email').value,phone:$('#f-phone').value,addr:$('#f-address').value,city:$('#f-city').value,zip:$('#f-zip').value,country:$('#f-country').value},
+    ship:$('#f-ship').value, pay:$('#f-pay').value, promo,
+    items:cart.map(i=>({id:i.id,name:i.name,qty:i.qty,price:i.price})),
+    subtotal:s.sub, shipping:s.ship, discount:s.disc, tax:s.tax, total:s.total
+  };
+  const hist=JSON.parse(localStorage.getItem('lm_orders')||'[]'); hist.unshift(order); localStorage.setItem('lm_orders',JSON.stringify(hist));
+  alert(`Thank you! Order submitted for review.\nOrder ID: ${order.id}\nTotal: ${money(s.total)}`);
+  cart=[]; saveCart(); renderCart(); req.forEach(id=>$('#'+id).value=''); $('#f-terms').checked=false;
+  $('#msg').style.display='block'; $('#msg').textContent='Order received. We will email you shortly.';
+  setTimeout(()=>go('home'),1200);
+}
+
+/* ======== EXPORT ======== */
+function exportCSV(){
+  const orders=JSON.parse(localStorage.getItem('lm_orders')||'[]'); if(!orders.length){ alert('No orders yet'); return; }
+  const head=['id','date','name','email','phone','country','city','zip','address','items','subtotal','shipping','discount','tax','total','ship','pay','promo'];
+  const rows=orders.map(o=>{
+    const items=o.items.map(i=>`${i.name} x${i.qty} @${i.price}`).join('; ');
+    return [o.id,o.when,o.customer.name,o.customer.email,o.customer.phone,o.customer.country,o.customer.city,o.customer.zip,o.customer.addr,items,o.subtotal,o.shipping,o.discount,o.tax,o.total,o.ship,o.pay,(o.promo?o.promo.code:'')].map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',');
+  });
+  const csv=[head.join(','),...rows].join('\r\n'); const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='orders.csv'; a.click();
+}
+function exportXLS(){
+  const orders=JSON.parse(localStorage.getItem('lm_orders')||'[]'); if(!orders.length){ alert('No orders yet'); return; }
+  const th=['ID','Date','Name','Email','Phone','Country','City','ZIP','Address','Items','Subtotal','Shipping','Discount','Tax','Total','Method','Payment','Promo'];
+  const rows=orders.map(o=>{ const items=o.items.map(i=>`${i.name} x${i.qty} @${i.price}`).join('; '); return [o.id,o.when,o.customer.name,o.customer.email,o.customer.phone,o.customer.country,o.customer.city,o.customer.zip,o.customer.addr,items,o.subtotal,o.shipping,o.discount,o.tax,o.total,o.ship,o.pay,(o.promo?o.promo.code:'')]; });
+  let html='<table border="1"><thead><tr>'+th.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr></thead><tbody>';
+  rows.forEach(r=>{ html+='<tr>'+r.map(c=>`<td>${esc(c)}</td>`).join('')+'</tr>'; }); html+='</tbody></table>';
+  const blob=new Blob([`<!DOCTYPE html><html><head><meta charset="UTF-8"></head><body>${html}</body></html>`],{type:'application/vnd.ms-excel'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='orders.xls'; a.click();
+}
+
+/* ======== SEO JSON-LD (visible products page) ======== */
+function injectProductLD(items){
+  const prods=items.slice(0,12).map(p=>({"@type":"Product","name":p.name,"image":p.img,"description":p.desc,"sku":p.id,"brand":{"@type":"Brand","name":p.brand},"offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":p.price,"highPrice":p.price,"offerCount":1,"availability":"https://schema.org/InStock"}}));
+  const old=document.getElementById('ld-prods'); if(old) old.remove();
+  const s=document.createElement('script'); s.type='application/ld+json'; s.id='ld-prods'; s.textContent=JSON.stringify({"@context":"https://schema.org","@graph":prods}); document.head.appendChild(s);
+}
+
+/* ======== INIT ======== */
+(function init(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  // normalize brands set
+  if(!(filter.brands instanceof Set)) filter.brands=new Set(filter.brands||[]);
+  badge(); // cart badge
+  // Home
+  // Shop
+  renderShop();
+  // Cart preload (not shown)
+  renderCart();
+  // Sync checkout totals when open
+  // Accessibility: close modal by backdrop
+})();
+</script>
+</body>
+</html>
